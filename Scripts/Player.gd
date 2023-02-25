@@ -12,13 +12,13 @@ const FLY_ACCEL = 4
 
 # walk vars
 var gravity = -9.8 * 3
-const MAX_SPEED = 20
-const MAX_RUNNING_SPEED = 30
+const MAX_SPEED = 4
+const MAX_RUNNING_SPEED = 10
 const ACCEL = 2
 const DECCEL = 6
 
 # jump vars
-var jump_height = 10
+var jump_height = 8
 
 var pos
 
@@ -89,11 +89,11 @@ func walk(delta):
 	v = move_and_slide()
 	
 	if(Input.is_action_just_pressed("jump")):
-		if velocity.y < jump_height:
+		if velocity.y < jump_height and is_on_floor():
 			velocity.y = jump_height
 		else:
 			velocity.y = 0
-
+		
 func fly(delta):
 	# reset the direction of the player
 	direction = Vector3()

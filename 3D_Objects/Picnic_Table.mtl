@@ -1,0 +1,23 @@
+# Blender MTL File: 'GameReadyTreeAssets.blend'
+# Material Count: 2
+
+newmtl Metal
+Ns 728.999998
+Ka 0.800000 0.800000 0.800000
+Kd 0.195988 0.131167 0.110641
+Ks 0.400000 0.400000 0.400000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl WoodPlank2
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /run/media/ciaran/Quick_Storage/Files/Textures/CC_textures/Texture_Atlases/Man-Made/Wood/Wood_Plank_Seamless_Color.png

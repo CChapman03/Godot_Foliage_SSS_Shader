@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bvsub56dmd5x7"]
+
+[ext_resource type="Texture2D" uid="uid://onctaynwf1c5" path="res://Textures/Rusted_Metal_001.png" id="1_mb0vr"]
+[ext_resource type="Texture2D" uid="uid://bexdrot4djx25" path="res://Textures/Rusted_Metal_001_normal.png" id="2_fate1"]
+
+[resource]
+albedo_texture = ExtResource("1_mb0vr")
+metallic = 0.63
+metallic_specular = 0.48
+normal_enabled = true
+normal_scale = 0.2
+normal_texture = ExtResource("2_fate1")

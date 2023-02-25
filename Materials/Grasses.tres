@@ -1,0 +1,77 @@
+[gd_resource type="ShaderMaterial" load_steps=12 format=3 uid="uid://b7ol7j164lfxg"]
+
+[ext_resource type="Shader" path="res://Materials/Test_SSS_Shader.gdshader" id="1_32td2"]
+[ext_resource type="Texture2D" uid="uid://bp68vpjyxyqo3" path="res://Textures/Grass01_Color.png" id="2_vbwgw"]
+[ext_resource type="Texture2D" uid="uid://b7seabgy72ubb" path="res://Textures/Grass01_Normal.png" id="3_265kf"]
+
+[sub_resource type="Gradient" id="Gradient_yynon"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_imf3r"]
+gradient = SubResource("Gradient_yynon")
+
+[sub_resource type="Gradient" id="Gradient_mg1ow"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ghnop"]
+gradient = SubResource("Gradient_mg1ow")
+
+[sub_resource type="Gradient" id="Gradient_v24o2"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yvgb0"]
+gradient = SubResource("Gradient_v24o2")
+
+[sub_resource type="Gradient" id="Gradient_ie83j"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6jdts"]
+gradient = SubResource("Gradient_ie83j")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_32td2")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/alpha_scissor_threshold = 0.5
+shader_parameter/alpha_antialiasing_edge = 0.34
+shader_parameter/albedo_texture_size = Vector2i(416, 512)
+shader_parameter/point_size = 0.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
+shader_parameter/specular = 0.0
+shader_parameter/metallic = 0.0
+shader_parameter/normal_scale = 0.100001
+shader_parameter/ao_texture_channel = null
+shader_parameter/ao_light_affect = 0.1
+shader_parameter/subsurface_scattering_strength = 0.0
+shader_parameter/transmittance_color = Color(1, 1, 1, 1)
+shader_parameter/transmittance_depth = 32.0
+shader_parameter/transmittance_boost = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/sss_thickness = Vector2(0, 0)
+shader_parameter/sss_power = 1.0
+shader_parameter/sss_distortion = 1.0
+shader_parameter/sss_scale = 0.5
+shader_parameter/sss_strength = 3.0
+shader_parameter/sss_color = Color(1, 1, 1, 1)
+shader_parameter/speed = 1.0
+shader_parameter/min_strength = 0.1
+shader_parameter/max_strength = 0.2
+shader_parameter/interval = 3.5
+shader_parameter/detail = 2.0
+shader_parameter/distortion = 1.0
+shader_parameter/direction = Vector2(1, 0.5)
+shader_parameter/heightOffset = 0.0
+shader_parameter/texture_albedo = ExtResource("2_vbwgw")
+shader_parameter/texture_metallic = SubResource("GradientTexture1D_yvgb0")
+shader_parameter/texture_roughness = SubResource("GradientTexture1D_6jdts")
+shader_parameter/texture_normal = ExtResource("3_265kf")
+shader_parameter/texture_ambient_occlusion = SubResource("GradientTexture1D_ghnop")
+shader_parameter/sss_texture = SubResource("GradientTexture2D_imf3r")

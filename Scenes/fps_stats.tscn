@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsj16dbf1w7g3"]
+
+[ext_resource type="Script" path="res://FPS_Stats.gd" id="1_el0j2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8mgby"]
+font_size = 24
+
+[node name="FPS_Stats" type="ColorRect"]
+script = ExtResource("1_el0j2")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+alignment = 2
+
+[node name="HBoxContainer" type="Control" parent="HFlowContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="HFlowContainer/HBoxContainer"]
+custom_minimum_size = Vector2(125, 50)
+layout_mode = 2
+offset_right = 125.0
+offset_bottom = 50.0
+grow_horizontal = 0
+
+[node name="FPS_Counter" type="Label" parent="HFlowContainer/HBoxContainer"]
+layout_mode = 2
+offset_left = 48.0
+offset_top = 5.0
+offset_right = 116.0
+offset_bottom = 42.0
+grow_horizontal = 0
+text = "FPS: 0"
+label_settings = SubResource("LabelSettings_8mgby")
+horizontal_alignment = 2

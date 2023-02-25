@@ -1,0 +1,39 @@
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://ciyghfus1nq6a"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_rrg2n"]
+rayleigh_coefficient = 12.07
+mie_eccentricity = 0.91
+mie_color = Color(0.741176, 0.737255, 0.627451, 1)
+turbidity = 372.61
+sun_disk_scale = 61.0
+
+[sub_resource type="Sky" id="Sky_xamfr"]
+sky_material = SubResource("PhysicalSkyMaterial_rrg2n")
+process_mode = 2
+
+[resource]
+background_mode = 2
+background_intensity = 48000.0
+sky = SubResource("Sky_xamfr")
+ambient_light_source = 3
+reflected_light_source = 2
+tonemap_mode = 2
+tonemap_exposure = 2.4
+ssr_enabled = true
+ssao_enabled = true
+ssao_intensity = 8.0
+ssao_detail = 0.95
+ssao_light_affect = 1.0
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+sdfgi_min_cell_size = 0.0078125
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 0.58
+glow_bloom = 1.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+volumetric_fog_albedo = Color(0.847059, 0.796078, 0.752941, 1)
+volumetric_fog_emission = Color(0.0117647, 0.0117647, 0.0117647, 1)
+adjustment_brightness = 1.31

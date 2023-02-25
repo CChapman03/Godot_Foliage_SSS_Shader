@@ -1,0 +1,63 @@
+[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://xewkkyomv4mf"]
+
+[ext_resource type="Shader" path="res://Materials/Test_SSS_Shader.gdshader" id="1_xgb7o"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mnvk6"]
+load_path = "res://.godot/imported/Tree_texture_SSS.png-f6126f7f02ab09e1e6f4b01ace263dab.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nff6l"]
+load_path = "res://.godot/imported/Tree_texture.png-8aff8731bee039ea46d28fb17d49819a.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_syqei"]
+load_path = "res://.godot/imported/Tree_texture_Nornal.png-54a3b268e1b04dc8b79acedaa04e2360.s3tc.ctex"
+
+[sub_resource type="Gradient" id="Gradient_mcwti"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.180392, 0.866667, 0.00392157, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_tpxne"]
+gradient = SubResource("Gradient_mcwti")
+width = 1
+use_hdr = true
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_xgb7o")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/alpha_scissor_threshold = 0.992
+shader_parameter/alpha_antialiasing_edge = 1.0
+shader_parameter/albedo_texture_size = Vector2i(1536, 1303)
+shader_parameter/point_size = 0.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/normal_scale = 1.0
+shader_parameter/ao_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/ao_light_affect = 0.5
+shader_parameter/subsurface_scattering_strength = 0.0
+shader_parameter/transmittance_color = Color(1, 1, 1, 1)
+shader_parameter/transmittance_depth = 32.0
+shader_parameter/transmittance_boost = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/sss_thickness = Vector2(0, 0)
+shader_parameter/sss_power = 1.0
+shader_parameter/sss_distortion = 2.0
+shader_parameter/sss_scale = 0.5
+shader_parameter/sss_strength = 4.0
+shader_parameter/sss_color = Color(1, 1, 1, 1)
+shader_parameter/speed = 1.0
+shader_parameter/min_strength = null
+shader_parameter/max_strength = 0.1
+shader_parameter/interval = 3.5
+shader_parameter/detail = 1.0
+shader_parameter/distortion = 0.8
+shader_parameter/direction = Vector2(1, 1)
+shader_parameter/heightOffset = 0.15
+shader_parameter/texture_albedo = SubResource("CompressedTexture2D_nff6l")
+shader_parameter/texture_normal = SubResource("CompressedTexture2D_syqei")
+shader_parameter/texture_subsurface_scattering = SubResource("GradientTexture1D_tpxne")
+shader_parameter/sss_texture = SubResource("CompressedTexture2D_mnvk6")
